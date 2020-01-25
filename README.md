@@ -1,5 +1,5 @@
-[![](https://images.microbadger.com/badges/version/mikube/depreq.svg)](https://microbadger.com/images/mikube/depreq "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/mikube/depreq.svg)](https://microbadger.com/images/mikube/depreq "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/mikube/depreq.svg)](https://microbadger.com/images/mikube/depreq)
+[![](https://images.microbadger.com/badges/image/mikube/depreq.svg)](https://microbadger.com/images/mikube/depreq)
 
 <h1 align="center">:rocket: Depreq</h1>
 Deploy Requester for GitOps.
@@ -21,7 +21,7 @@ Clone a manifest repository, update tags, commit the change, and create a pull r
 
 
 ## :soon: Usage
-Download a single binary from [release page](https://github.com/minikube/Depreq/releases).
+Download a single binary from [release page](https://github.com/mikube/Depreq/releases).
 
 ```sh
 # CI on application repository
