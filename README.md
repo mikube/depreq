@@ -1,3 +1,6 @@
+[![](https://images.microbadger.com/badges/version/mikube/depreq.svg)](https://microbadger.com/images/mikube/depreq "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/mikube/depreq.svg)](https://microbadger.com/images/mikube/depreq "Get your own image badge on microbadger.com")
+
 <h1 align="center">:rocket: Depreq</h1>
 Deploy Requester for GitOps.
 
