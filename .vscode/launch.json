@@ -1,0 +1,60 @@
+{
+    // Use IntelliSense to find out which attributes exist for C# debugging
+    // Use hover for the description of the existing attributes
+    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Depreq",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Depreq/bin/Debug/netcoreapp3.1/Depreq.dll",
+            "args": [
+                "--git-user",
+                "amaya382",
+                "--git-email",
+                "mail@sapphire.in.net",
+                "--git-token-user",
+                "amaya382",
+                "--git-token",
+                "git-token",
+                "--manifest-uri",
+                "https://github.com/amaya382/manifests.git",
+                "--manifest-base-branch",
+                "dev",
+                "--app-image",
+                "gitopsdemo/app-a",
+                "--app-uri",
+                "https://github.com/gitops-demo/app-a",
+                "--app-curr-commit",
+                "cd398c7ce9d149884620a1a48764d567b853a8a0",
+                "--github-user",
+                "github-user",
+                "--github-assignees",
+                "amaya382",
+                // "--github-reviewers",
+                // "github-reviewers1:github-reviewers2",
+                // "--gitlab-user",
+                // "gitlab-user",
+                "--manifest-values-files",
+                "app-a/values/dev-app-a.yaml:app-a/values/prd-app-a.yaml",
+                // "--manifest-tag-keys",
+                // "image.repository",
+                "--manifest-tag-pattern",
+                "(?<=repository: )([0-9a-f]+)$",
+            ],
+            "cwd": "${workspaceFolder}/Depreq",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}
