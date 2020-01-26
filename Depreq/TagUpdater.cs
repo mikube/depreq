@@ -24,12 +24,12 @@ namespace Depreq
             //   "host/owner/name:tag"
             //   "owner/name:tag"
             //   "tag"
-            return Regex.Replace(input, "(?<=[$:])(.+?)$", newTag);
+            return Regex.Replace(input, @"([^:]+)$", newTag);
         }
 
         public static string ExtractTag(string input)
         {
-            return Regex.Replace(input, "^.+:", "");
+            return Regex.Replace(input, @"^.+:", "");
         }
     }
 
