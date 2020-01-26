@@ -25,13 +25,37 @@ namespace Depreq
             }
             else
             {
+                var key = arraySuffixPattern.Replace(nestedKey.First(), "");
 
-                if (arraySuffixPattern.IsMatch(nestedKey.First()) && root.NodeType != YamlNodeType.Sequence)
+                // Check Sequence `[*]`
+                if (arraySuffixPattern.IsMatch(nestedKey.First()))
                 {
-                    throw new Exception("Failed to query by the key");
+                    switch (root.NodeType)
+                    {
+                        case YamlNodeType.Mapping:
+                            {
+                                if (root[key].NodeType != YamlNodeType.Sequence)
+                                {
+                                    throw new Exception($"Failed to query by the key.\nSequence is expected but {root[key].NodeType}");
+                                }
+                                break;
+                            }
+                        case YamlNodeType.Sequence:
+                            {
+                                if ((root as YamlSequenceNode).Any(node =>
+                                    node.NodeType == YamlNodeType.Sequence))
+                                {
+                                    throw new Exception($"Failed to query by the key.\nSequence is expected but {root[key].NodeType}");
+                                }
+                                break;
+                            }
+                        default:
+                            {
+                                throw new Exception($"Failed to query by the key.");
+                            }
+                    }
                 }
 
-                var key = arraySuffixPattern.Replace(nestedKey.First(), "");
                 switch (root.NodeType)
                 {
                     case YamlNodeType.Mapping:
