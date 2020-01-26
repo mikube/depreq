@@ -6,9 +6,10 @@ using YamlDotNet.RepresentationModel;
 
 namespace Depreq
 {
-    static class YamlUtil
+    public static class YamlUtil
     {
         private static Regex arraySuffixPattern = new Regex(@"\[\*\]$", RegexOptions.Compiled);
+        // FIXME: Dirty
         // FIXME: Use jsonpath or sth insead
         public static string UpdateByNestedKey(YamlNode root, IEnumerable<string> nestedKey, Func<string, string> oldValToNewVal)
         {
@@ -79,10 +80,10 @@ namespace Depreq
         }
     }
 
-    static class TemplateUtil
+    public static class TemplateUtil
     {
         private static Regex placeholderPattern = new Regex(@"\{(.+?)\}", RegexOptions.Compiled);
-        // FIXME
+        // FIXME: Dirty
         public static string Apply<T>(T obj, string input)
         {
             var type = typeof(T);

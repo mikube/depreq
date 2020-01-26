@@ -8,7 +8,7 @@ using CommandLine;
 
 namespace Depreq
 {
-    class Options
+    public class Options
     {
         // Core
         [Option('u', "git-user", Required = true,

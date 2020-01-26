@@ -15,7 +15,7 @@ namespace Depreq
         void Update();
     }
 
-    static class TagUpdater
+    public static class TagUpdater
     {
         public static string TagReplacer(string input, string newTag)
         {
@@ -41,6 +41,7 @@ namespace Depreq
             this.opts = _opts;
         }
 
+        // TODO: Testable
         public void Update()
         {
             var tagPattern = new Regex(opts.ManifestTagPattern, RegexOptions.Compiled);
@@ -68,6 +69,7 @@ namespace Depreq
             this.opts = _opts;
         }
 
+        // TODO: Testable
         public void Update()
         {
             foreach (var file in opts.ManifestValuesFiles)
