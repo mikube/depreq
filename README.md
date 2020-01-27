@@ -1,7 +1,7 @@
 [![](https://images.microbadger.com/badges/version/mikube/depreq.svg)](https://microbadger.com/images/mikube/depreq)
 [![](https://images.microbadger.com/badges/image/mikube/depreq.svg)](https://microbadger.com/images/mikube/depreq)
 
-<h1 align="center">:rocket: Depreq</h1>
+<h1 align="center">:rocket: depreq</h1>
 Deploy Requester for GitOps.
 
 Clone a manifest repository, update tags, commit the change, and create a pull request! (from CI context)
@@ -21,7 +21,7 @@ Clone a manifest repository, update tags, commit the change, and create a pull r
 
 
 ## :soon: Usage
-Download a single binary from [release page](https://github.com/mikube/Depreq/releases).
+Download a single binary from [release page](https://github.com/mikube/depreq/releases).
 
 ```sh
 # CI on application repository
@@ -100,4 +100,4 @@ spec:
 
 
 ## :round_pushpin: Note
-* Now Depreq uses a git commit hash as an image tag
+* Now depreq uses a git commit hash as an image tag
