@@ -1,5 +1,6 @@
 [![](https://images.microbadger.com/badges/version/mikube/depreq.svg)](https://microbadger.com/images/mikube/depreq)
 [![](https://images.microbadger.com/badges/image/mikube/depreq.svg)](https://microbadger.com/images/mikube/depreq)
+[![](https://github.com/mikube/depreq/workflows/Test/badge.svg?branch=master&event=push)](https://github.com/mikube/depreq/actions?query=workflow%3ATest)
 
 <h1 align="center">:rocket: depreq</h1>
 Deploy Requester for GitOps.
