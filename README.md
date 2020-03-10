@@ -7,6 +7,12 @@ Deploy Requester for GitOps.
 
 Clone a manifest repository, update tags, commit the change, and create a pull request! (from CI context)
 
+Handmade scripts are no longer needed.
+<div align="center"><img src="./README/sample_ci.png" width="600"/></div>
+
+Here is an automatically created pull request sample.
+<div align="center"><img src="./README/sample_pr.png" width="600"/></div>
+
 
 ## :trident: Supported Options
 ### Template Engines
